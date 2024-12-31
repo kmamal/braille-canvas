@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+require('child_process').execSync('npm i --no-audit', { cwd: __dirname })
+
+const args = (() => {
+	const Argparse = require('argparse')
+
+	const parser = new Argparse.ArgumentParser({
+		description: "Foo",
+		add_help: true, // eslint-disable-line camelcase
+	})
+
+	parser.add_argument('-f', '--foo', {
+		// default: null,
+		// action: 'store_true',
+		help: "Foo",
+	})
+
+	return parser.parse_args()
+})()
+
+//
+
+console.log(args)
