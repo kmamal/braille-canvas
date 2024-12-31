@@ -8,7 +8,11 @@
   },
   "license": "MIT",
   "main": "./src/index.js",
-  "exports": "./src/index.js",
+  "exports": {
+    "./canvas": "./src/canvas.js",
+    "./bresenham": "./src/bresenham.js",
+    "./turtle": "./src/turtle.js"
+  },
   "scripts": {
     "test": "npx -p @kmamal/testing testing",
     "update-exports": "node ./scripts/update-exports.mjs"
