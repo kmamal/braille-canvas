@@ -64,7 +64,23 @@ class BrailleCanvas {
 		this._canvas[index] ^= SET_MASKS[y % 4][x % 2]
 	}
 
-	render () {
+	renderLines () {
+		const W = this._width / 2
+		const H = this._height / 4
+		const lines = new Array(H)
+		const line = new Array(W)
+
+		for (let i = 0; i < H; i++) {
+			for (let j = 0; j < W; j++) {
+				line[j] = BRAILLE[this._canvas[W * i + j]]
+			}
+			lines[i] = line.join('')
+		}
+
+		return lines
+	}
+
+	renderString () {
 		const W = this._width / 2
 		const H = this._height / 4
 		const parts = new Array((W + 1) * H - 1)

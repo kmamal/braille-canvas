@@ -14,4 +14,5 @@ for (let i = 0; i < 36; i++) {
 
 const canvas = t.frame()
 
-console.log(canvas.render())
+console.log(canvas.renderString())
+console.log(canvas.renderLines().join('\n'))

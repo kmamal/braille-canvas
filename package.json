@@ -18,8 +18,7 @@
     "update-exports": "node ./scripts/update-exports.mjs"
   },
   "dependencies": {
-    "@kmamal/util": "^0.2.18",
-    "argparse": "^2.0.1"
+    "@kmamal/util": "^0.2.18"
   },
   "devDependencies": {
     "@kmamal/testing": "^0.0.30"
